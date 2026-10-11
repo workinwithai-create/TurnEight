@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TurnEight — Eight-bar bridge desk</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tap-gate">
+  <button id="tap-btn">Tap to start audio</button>
+  <p>iOS silent switch mutes Web Audio.</p>
+</div>
+<header>
+  <h1>TurnEight</h1>
+  <p>Eight-bar bridge desk. Live FluidR3 chairs so a looping chorus finally has a place to turn around.</p>
+  <div id="status">Loading…</div>
+</header>
+<main>
+  <section>
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="92"></label>
+    <label>Key shift <select id="key">
+      <option value="-3">Am</option>
+      <option value="0">C</option>
+      <option value="2">D</option>
+      <option value="-5">G</option>
+    </select></label>
+    <label>Bars <select id="bars"><option value="8" selected>8</option><option value="4">4</option></select></label>
+  </section>
+  <section>
+    <h2>Recipes</h2>
+    <div id="recipe-list"></div>
+  </section>
+  <section>
+    <button id="play-a">A · Pocket</button>
+    <button id="play-b">B · Bridge</button>
+    <button id="stop">Stop</button>
+    <div id="playhead"></div>
+  </section>
+  <section>
+    <button id="export-wav">Export WAV (loop)</button>
+    <button id="export-wav-tail">Export WAV (with tail)</button>
+    <button id="export-mid">Export MIDI</button>
+    <div id="export-status"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
